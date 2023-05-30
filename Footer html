@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="viaje.css">
+    <script src="https://kit.fontawesome.com/5687f4a15a.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaje</title>
+</head>
+<body>
+    <div class="counter">
+        <div class="image">
+            <img src="foto1 .jpeg" alt="">
+            <i class="text"><p>Fácil</p></i>
+        </div>
+        <div class="image">
+            <img src="foto2.jpg" alt="">
+            <i class="text"><p>Cómodo</p></i>
+        </div>
+        <div class="image">
+            <img src="foto3.jpeg" alt="">
+            <i class="text"><p>Explorable</p></i>
+        </div>
+    </div>
+     <footer>
+        <div class="footer-content">
+            <h3>Hola Mundo</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis corrupti dignissimos dolorum repellendus omnis, nihil blanditiis maiores laboriosam culpa dolorem. Dolorum dolore quia rerum quibusdam doloremque architecto quaerat eaque facere!</p>
+            <div class="iconos">
+                <container class="ig"><a href="#"><i class="fa-brands fa-instagram"></i></a></container>
+                <container class="yt"><a href="#"><i class="fa-brands fa-youtube"></i></a></container>
+                <container class="steam"><a href="#"><i class="fa-brands fa-steam"></i></a></container>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 By: Los Angeles Customs</p>
+        </div>
+     </footer>
+</body>
+</html>
