@@ -1,46 +1,103 @@
 .outer-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    box-sizing: border-box;
-    padding: 20px;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid #000; /* Cambiar el color y el grosor del borde según sea necesario */
-    padding: 20px;
-    max-width: 400px; /* Ajustar el ancho máximo del rectángulo según sea necesario */
-    width: 100%;
-  }
-  
-  .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 2px solid black;
-  }
-  
-  .button-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .button-container button {
-    margin-top: 10px;
-  }
-  
-  /* Resto de tus estilos CSS existentes */
-  
-  h1, form {
-    margin-top: 20px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 20px;
+}
 
-  
-  
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #000000;
+  padding: 35px;
+  max-width: 420px;
+  width: 100%;
+  background: #eed9d9;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid rgb(0, 0, 0);
+  margin-bottom: -15px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row; /* Cambio a dirección horizontal */
+  align-items: center;
+  justify-content: center; /* Centra los botones horizontalmente */
+  margin-top: 20px;
+}
+
+.button-container button {
+  margin-top: 10px;
+  background: #ffffff;
+  margin-right: 10px; /* Agrega un margen derecho entre los botones */
+}
+
+/* Resto de tus estilos CSS existentes */
+
+h1 {
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+}
+
+/* Nuevos estilos para la presentación de empresa */
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.welcome-message {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.company-description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonials {
+  margin-bottom: 20px;
+}
+
+.login-form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  width: 100%;
+}
+
+.login-form-container input {
+  width: 100%;
+  padding: 5px;
+}
+
+.login-form-container label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-container input[type="text"],
+.login-form-container input[type="password"] {
+  width: 100%;
+}
