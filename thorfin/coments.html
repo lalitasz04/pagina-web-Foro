@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foro Escolar</title>
+  
+  <!-- ESTILO DE LA PÁGINA -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: orange;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+    header h1 {
+      margin: 0;
+      display: inline;
+    }
+    .nav-links {
+      float: right;
+      margin-top: -5px;
+    }
+    .nav-links a {
+      margin-right: 50px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .container {
+      width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-top: 5px solid #ccc;
+      border-bottom: 5px solid #ccc;
+      border-radius: 20px;
+    }
+    .forum {
+      margin-bottom: 20px;
+    }
+    .forum h2 {
+      margin-top: 0;
+    }
+    .forum .comment-box {
+      margin-bottom: 20px;
+    }
+    .forum .comment-box textarea {
+      width: 100%;
+      height: 100px;
+      resize: none;
+      padding: 5px;
+    }
+    .forum .comment-box button {
+      padding: 5px 10px;
+      margin-top: 5px;
+    }
+    .forum .comment-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .forum .comment-list li {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .forum .comment-list .comment-meta {
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header> <!-- ENCABEZADO DE LA PÁGINA -->
+    <h1>Foro</h1>
+    <div class="nav-links">
+      <a href="cabecera.html">Home</a>
+      <a href="#">Privacy</a>
+    </div>
+  </header> <!-- COMENTARIOS DE LA PÁGINA -->
+  <div class="container">
+    <div class="forum">
+      <h2>Comentarios</h2>
+      <ul class="comment-list" id="commentList"></ul>
+      <div class="comment-box">
+        <textarea id="commentInput" placeholder="Escribe tu comentario"></textarea>
+        <button onclick="publicarComentario()">Publicar</button>
+        <p id="errorMessage" class="error-message"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LISTA DE PALABRAS PROHIBIDAS Y COMPROBACIÓN DEL TEXTO INGRESADO POR EL USUARIO -->
+  <script>
+    var palabrasProhibidas = ['puto', 'puta', 'verga', 'rarito', 'mierda', 'pelotudo', 'boludo'];
+
+    function publicarComentario() {
+      var commentInput = document.getElementById("commentInput");
+      var commentText = commentInput.value.trim();
+
+      if (commentText === "") {
+        return;
+      }
+
+      var comentarioInvalido = palabrasProhibidas.some(function(palabraProhibida) {
+        var regex = new RegExp("\\b" + palabraProhibida + "\\b", "i");
+        return regex.test(commentText);
+      });
+
+      if (comentarioInvalido) {
+        var errorMessage = document.getElementById("errorMessage");
+        errorMessage.textContent = "No puedes ingresar malas palabras";
+        return;
+      }
+
+      var commentItem = document.createElement("li");
+      commentItem.textContent = commentText;
+
+      var commentMeta = document.createElement("div");
+      commentMeta.classList.add("comment-meta");
+      commentMeta.textContent = "Por: Nombre de Usuario - " + obtenerFechaActual();
+
+      commentItem.appendChild(commentMeta);
+
+      var commentList = document.getElementById("commentList");
+      commentList.insertBefore(commentItem, commentList.firstChild);
+
+      commentInput.value = "";
+
+      var errorMessage = document.getElementById("errorMessage");
+      errorMessage.textContent = "";
+    }
+    
+    function obtenerFechaActual() {
+      var fecha = new Date();
+      var dia = fecha.getDate();
+      var mes = fecha.getMonth() + 1;
+      var anio = fecha.getFullYear();
+      var hora = fecha.getHours();
+      var minutos = fecha.getMinutes();
+
+      return dia + "/" + mes + "/" + anio + " " + hora + ":" + minutos;
+    }
+  </script>
+</body>
+</html>
