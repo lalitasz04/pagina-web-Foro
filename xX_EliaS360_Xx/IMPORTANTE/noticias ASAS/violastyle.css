@@ -1,0 +1,63 @@
+body {
+    text-align: center;
+    text-shadow: 0px 0px 1px  whitesmoke;
+    font-family: Arial, sans-serif;
+    background-image: url("notis.jpg");
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.noticia {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.noticia img {
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.noticia h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.noticia p {
+    color: #666;
+}
+
+.fecha {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.8em;
+    color: #999;
+}
+
+.eliminar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 0.8em;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.editar {
+    position: absolute;
+    top: 5px;
+    right: 55px;
+    font-size: 0.8em;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.oculto {
+    display: none;
+}

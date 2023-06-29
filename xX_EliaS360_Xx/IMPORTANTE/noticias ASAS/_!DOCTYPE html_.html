@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Repositorio de Noticias</title>
+<link rel="stylesheet" href="violastyle.css">
+</head>
+<body>
+    <h1>Repositorio de Noticias</h1>
+        <form onsubmit="guardarNoticia(event)">
+            <label for="titulo">Título de la noticia:</label><br>
+            <input type="text" id="titulo" name="titulo"><br><br>
+
+            <label for="contenido">Contenido de la noticia:</label><br>
+            <textarea id="contenido" name="contenido" rows="4" cols="50"></textarea><br><br>
+
+            <label for="imagen">Imagen de la noticia:</label><br>
+            <input type="file" id="imagen" name="imagen" onchange="mostrarImagen(event)"><br>
+            <img id="imagenMostrada" style="display: none; max-width: 200px; margin-top: 10px;" alt="Imagen seleccionada">
+            <br>
+
+            <input type="submit" value="Guardar noticia">
+        </form>
+
+        <!-- Aquí puedes mostrar las noticias guardadas -->
+        <div id="noticiasGuardadas" class="oculto">
+            <h2>Noticias guardadas:</h2>
+        </div> 
+    <script src="violastyle.js"></script>
+</body>
+</html>
