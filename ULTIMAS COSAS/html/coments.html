@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/coments.css">
+  <script src="/js/comentjava.js"></script>
+  <title>Foro Escolar</title>
+</head>
+<body>
+<!-- whatsapp -->
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-2a02a3a9-6ca5-460e-ba79-454b6f912b07"></div>
+  <header> <!-- ENCABEZADO DE LA PÁGINA -->
+    <h1>Foro</h1>
+    <div class="nav-links">
+      <a href="cabecera.html" class="button">Volver al foro</a>
+    </div>
+  </header> <!-- COMENTARIOS DE LA PÁGINA -->
+  <div class="container">
+    <div class="forum">
+      <h2>Comentarios</h2>
+      <ul class="comment-list" id="commentList"></ul>
+      <div class="comment-box">
+        <textarea id="commentInput" placeholder="Escribe tu comentario"></textarea>
+        <button onclick="publicarComentario()">Publicar</button>
+        <p id="errorMessage" class="error-message"></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
